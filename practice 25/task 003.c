@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+	char c[]="life, living matter and, as such, matter that shows certain attributes that \
+include responsiveness, growth, metabolism, energy transformation, and reproduction. \
+Although a noun, as with other defined entities, the word life might be better cast as \
+a verb to reflect its essential status as a process. Life comprises individuals, living \
+beings, assignable to groups (taxa). Each individual is composed of one or more minimal \
+living units, called cells, and is capable of transformation of carbon-based and other \
+compounds (metabolism), growth, and participation in reproductive acts. Life forms \
+present on Earth today have evolved from ancient common ancestors through the generation \
+of hereditary variation and natural selection. The several branches of science \
+that reveal the common historical, functional, and chemical basis of the evolution of all \
+life include electron microscopy, genetics, paleo biology (including paleontology), and \
+molecular biology.";
+int i,j,count=0,sen=0,c1=0,length;
+for(i=0;c[i]!=0;i++)
+{
+	count++;
+	c1++;
+	if(c[i]=='.')
+	{
+		sen++;
+		for(j=length; j<c1; j++){
+			printf("%c",c[j]);
+		}
+		printf("\n");
+	    length+=count;	
+	     count=0;
+    }
+}
+printf("the number of sentences are:%d",sen);
+}

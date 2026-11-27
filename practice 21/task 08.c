@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,k,r;
+	printf("ROWS:");
+	scanf("%d",&r);
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<i;j++)
+		printf("O");
+		for(k=r;k>i;k--)
+		printf("*");
+		for(k=r;k>i;k--)
+		printf("*");
+		for(j=0;j<i;j++)
+		printf("O");
+		printf("\n");
+	}
+	for(i=r-1;i>=0;i--)
+	{
+		for(j=i;j>0;j--)
+		printf("O");
+		for(k=r;k>i;k--)
+		printf("*");
+		for(k=r;k>i;k--)
+		printf("*");
+		for(j=i;j>0;j--)
+		printf("O");
+		printf("\n");
+	}
+}
